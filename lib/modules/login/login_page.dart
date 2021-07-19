@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:oxente_nutri_app/modules/home/home_page.dart';
 import 'package:oxente_nutri_app/shared/themes/app_colors.dart';
@@ -9,7 +7,7 @@ import 'package:oxente_nutri_app/shared/widgets/button_login/login_button.dart';
 
 class LoginPage extends StatefulWidget {
   static const router = '/login';
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -37,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Image.asset(AppImages.logoFull),
             ),
             Positioned(
-              top: size.height * 0.90,
+              bottom: size.height * 0.10,
               right: 0,
               left: 0,
               child: Column(
