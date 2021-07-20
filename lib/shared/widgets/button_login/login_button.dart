@@ -4,7 +4,7 @@ import 'package:oxente_nutri_app/shared/themes/app_text_styles.dart';
 
 class LoginButton extends StatelessWidget {
   final VoidCallback onTap;
-  const LoginButton({@required this.onTap}) : super();
+  const LoginButton({required this.onTap}) : super();
 
   @override
   Widget build(BuildContext context) {
@@ -48,38 +48,32 @@ class LoginButton extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 16),
-                  child: Text('Esqueceu a Senha?', style: TextStyle(
-                    fontSize: 12, color: Colors.grey
-                  ),),
+                  child: Text(
+                    'Esqueceu a Senha?',
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  ),
                 )),
-                Spacer(),
-              
-             
-
-              Container(
-                alignment: Alignment.bottomCenter,
-                height: 40,
-                width: MediaQuery.of(context).size.width * 0.4 ,
-                decoration: BoxDecoration(
+            Spacer(),
+            Container(
+              alignment: Alignment.bottomCenter,
+              height: 40,
+              width: MediaQuery.of(context).size.width * 0.4,
+              decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
                       Color(0xFF74BAA0),
                       Color(0xFFB8D8C0),
                     ],
                   ),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(50)
-                  )
-                ),
-                child: Center(
-                  child: Text('Login'.toUpperCase(),
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold
-                ),
-               ),
+                  borderRadius: BorderRadius.all(Radius.circular(50))),
+              child: Center(
+                child: Text(
+                  'Login'.toUpperCase(),
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               ),
+            ),
           ],
         ),
       ),

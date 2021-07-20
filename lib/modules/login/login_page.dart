@@ -7,7 +7,7 @@ import 'package:oxente_nutri_app/shared/widgets/button_login/login_button.dart';
 
 class LoginPage extends StatefulWidget {
   static const router = '/login';
-  const LoginPage({Key key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -26,27 +26,22 @@ class _LoginPageState extends State<LoginPage> {
         child: Stack(
           children: [
             Center(
-              child:
-              Container(
-                child: Image.asset(AppImages.background),
-              )
-            ),
+                child: Container(
+              child: Image.asset(AppImages.background),
+            )),
             Positioned(
-              top: size.height * 0.30,
-              left: 0.10,
-              right: 0.10,
-              child: Column (
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    child:
-                    Image.asset(AppImages.logoFull),
-                  )
-                ],
-              )
-              
-            ),
+                top: size.height * 0.30,
+                left: 0.10,
+                right: 0.10,
+                child: Column(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      height: MediaQuery.of(context).size.height * 0.3,
+                      child: Image.asset(AppImages.logoFull),
+                    )
+                  ],
+                )),
             Positioned(
               bottom: size.height * 0.10,
               right: 0,
