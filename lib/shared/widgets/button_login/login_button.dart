@@ -4,38 +4,74 @@ import 'package:oxente_nutri_app/shared/themes/app_text_styles.dart';
 
 class LoginButton extends StatelessWidget {
   final VoidCallback onTap;
-  const LoginButton({Key? key, required this.onTap}) : super(key: key);
+  const LoginButton({required this.onTap}) : super();
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 56,
+        width: 500,
+        height: 300,
+        padding: EdgeInsets.all(30),
         decoration: BoxDecoration(
-            color: AppColors.shape,
-            borderRadius: BorderRadius.circular(5),
-            border: Border.fromBorderSide(
-              BorderSide(
-                color: AppColors.stroke,
-              ),
-            )),
-        child: Row(
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+            color: Colors.blueGrey[100],
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black45,
+                blurRadius: 40,
+              )
+            ]),
+        child: Column(
           children: [
-            Expanded(
-              flex: 1,
-              child: Icon(Icons.email),
-            ),
-            Expanded(
-              flex: 4,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Entrar com E-mail",
-                    style: TextStyles.buttonGray,
+            TextFormField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                  icon: Icon(
+                    Icons.email,
+                    color: Color.fromRGBO(33, 102, 81, 100),
                   ),
-                ],
+                  hintText: 'Email'),
+            ),
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                  icon: Icon(
+                    Icons.lock,
+                    color: Color.fromRGBO(33, 102, 81, 100),
+                  ),
+                  hintText: 'Senha'),
+            ),
+            Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Text(
+                    'Esqueceu a Senha?',
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  ),
+                )),
+            Spacer(),
+            Container(
+              alignment: Alignment.bottomCenter,
+              height: 40,
+              width: MediaQuery.of(context).size.width * 0.4,
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFF74BAA0),
+                      Color(0xFFB8D8C0),
+                    ],
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(50))),
+              child: Center(
+                child: Text(
+                  'Login'.toUpperCase(),
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           ],
