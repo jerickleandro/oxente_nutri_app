@@ -21,18 +21,31 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Container(
-        width: size.width,
-        height: size.height,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
             Center(
-              child: Image.asset(AppImages.background),
+              child:
+              Container(
+                child: Image.asset(AppImages.background),
+              )
             ),
             Positioned(
-              top: size.height * 0.15,
-              left: 0,
-              right: 0,
-              child: Image.asset(AppImages.logoFull),
+              top: size.height * 0.30,
+              left: 0.10,
+              right: 0.10,
+              child: Column (
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child:
+                    Image.asset(AppImages.logoFull),
+                  )
+                ],
+              )
+              
             ),
             Positioned(
               bottom: size.height * 0.10,
