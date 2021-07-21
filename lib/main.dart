@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxente_nutri_app/modules/cadastro/cadastro_page.dart';
 import 'package:oxente_nutri_app/modules/home/home_page.dart';
 import 'package:oxente_nutri_app/modules/splash/splash_page.dart';
 import 'package:oxente_nutri_app/shared/themes/app_colors.dart';
@@ -23,6 +24,7 @@ class AppWidget extends StatelessWidget {
       routes: {
         LoginPage.router: (_) => LoginPage(),
         HomePage.router: (_) => HomePage(),
+        CadastroPage.router: (_) => CadastroPage()
       },
     );
   }
