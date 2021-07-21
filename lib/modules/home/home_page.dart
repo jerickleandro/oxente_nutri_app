@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:oxente_nutri_app/modules/cadastro/cadastro_page.dart';
 
 class HomePage extends StatefulWidget {
   static const router = '/home';
@@ -15,7 +18,17 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Home"),
       ),
-      body: Container(),
+      body: Container(
+        child: Column(
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, CadastroPage.router);
+                },
+                child: Text('Cadastrar Dieta'))
+          ],
+        ),
+      ),
     );
   }
 }
