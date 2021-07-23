@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:oxente_nutri_app/modules/home/home_page.dart';
-import 'package:oxente_nutri_app/modules/splash/splash_page.dart';
 import 'package:oxente_nutri_app/shared/themes/app_colors.dart';
 
 import 'modules/login/login_page.dart';

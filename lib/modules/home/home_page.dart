@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxente_nutri_app/modules/meal/meal_page.dart';
 import 'package:oxente_nutri_app/models/meal_model.dart';
 import 'package:oxente_nutri_app/modules/home/home_controller.dart';
 import 'package:oxente_nutri_app/shared/themes/app_colors.dart';
@@ -6,6 +7,7 @@ import 'package:oxente_nutri_app/shared/themes/app_images.dart';
 import 'package:oxente_nutri_app/shared/themes/app_text_styles.dart';
 import 'package:oxente_nutri_app/shared/widgets/progress_widget/progress_widget.dart';
 import 'package:provider/provider.dart';
+
 
 class HomePage extends StatefulWidget {
   static const router = '/home';
@@ -80,6 +82,12 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+
+      //body: SingleChildScrollView(
+      //child:
+      //  MealPage(),
+      //),
+
     );
   }
 }

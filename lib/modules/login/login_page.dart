@@ -7,7 +7,7 @@ import 'package:oxente_nutri_app/shared/widgets/button_login/login_button.dart';
 
 class LoginPage extends StatefulWidget {
   static const router = '/login';
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage() : super();
 
   @override
   _LoginPageState createState() => _LoginPageState();
