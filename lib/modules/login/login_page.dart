@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 40, right: 40, top: 5),
                     child: LoginButton(onTap: () {
-                      Navigator.pushNamed(context, HomePage.router);
+                      Navigator.pushReplacementNamed(context, HomePage.router);
                     }),
                   )
                 ],
