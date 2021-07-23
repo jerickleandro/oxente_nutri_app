@@ -1,22 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-// class MealPage extends StatefulWidget {
-//   const MealPage({Key? key}) : super(key: key);
-
-//   @override
-//   _MealPageState createState() => _MealPageState();
-// }
-
-// class _MealPageState extends State<MealPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return ListWheelScrollview(
-//       children: [],
-//       itemExtent:42,
-//     );
-//   }
-// }
+import 'package:oxente_nutri_app/modules/meal/addFood.dart';
+import 'package:oxente_nutri_app/modules/meal/meal_menu.dart';
 class MealPage extends StatelessWidget {
   const MealPage({ Key? key }) : super(key: key);
 
@@ -43,7 +28,8 @@ Widget _Breakfast(BuildContext context) {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: new InkWell(
-          onTap: () {},
+          onTap: () {Navigator.push(context, 
+            MaterialPageRoute(builder: (context) => AddFood()));},
           child: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
