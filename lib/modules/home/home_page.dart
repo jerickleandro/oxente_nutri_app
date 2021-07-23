@@ -8,7 +8,6 @@ import 'package:oxente_nutri_app/shared/themes/app_text_styles.dart';
 import 'package:oxente_nutri_app/shared/widgets/progress_widget/progress_widget.dart';
 import 'package:provider/provider.dart';
 
-
 class HomePage extends StatefulWidget {
   static const router = '/home';
   const HomePage({Key? key}) : super(key: key);
@@ -53,41 +52,39 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 24),
-                child: Text(
-                  "Minhas Refeições",
-                  style: TextStyles.titleBoldHeading,
-                ),
-              ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 24),
-            child: Divider(
-              thickness: 1,
-              height: 1,
-              color: AppColors.stroke,
-            ),
-          ),
-          SafeArea(
-            child: ChangeNotifierProvider(
-              create: (context) => HomeController()..findMeal(),
-              child: ListMeal(),
-            ),
-          ),
-        ],
+      // body: Column(
+      //   children: [
+      //     Row(
+      //       children: [
+      //         Padding(
+      //           padding: const EdgeInsets.only(top: 24),
+      //           child: Text(
+      //             "Minhas Refeições",
+      //             style: TextStyles.titleBoldHeading,
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.symmetric(vertical: 24),
+      //       child: Divider(
+      //         thickness: 1,
+      //         height: 1,
+      //         color: AppColors.stroke,
+      //       ),
+      //     ),
+      //     SafeArea(
+      //       child: ChangeNotifierProvider(
+      //         create: (context) => HomeController()..findMeal(),
+      //         child: ListMeal(),
+      //       ),
+      //     ),
+      //   ],
+      // ),
+
+      body: SingleChildScrollView(
+        child: MealPage(),
       ),
-
-      //body: SingleChildScrollView(
-      //child:
-      //  MealPage(),
-      //),
-
     );
   }
 }

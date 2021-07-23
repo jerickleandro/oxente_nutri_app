@@ -1,24 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:oxente_nutri_app/modules/meal/addFood.dart';
-import 'package:oxente_nutri_app/modules/meal/meal_menu.dart';
+
+//import 'package:oxente_nutri_app/modules/meal/meal_menu.dart';
 class MealPage extends StatelessWidget {
-  const MealPage({ Key? key }) : super(key: key);
+  const MealPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column( children: [
-      _Breakfast(context),
-      _Snack(context),
-      _Lunch(context),
-      _Snack2(context),
-      _Dinner(context),
-      _Supper(context)
-    ],),
-       );
-      
-      
+      child: Column(
+        children: [
+          _Breakfast(context),
+          _Snack(context),
+          _Lunch(context),
+          _Snack2(context),
+          _Dinner(context),
+          _Supper(context)
+        ],
+      ),
+    );
   }
 }
 
@@ -28,8 +29,10 @@ Widget _Breakfast(BuildContext context) {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: new InkWell(
-          onTap: () {Navigator.push(context, 
-            MaterialPageRoute(builder: (context) => AddFood()));},
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AddFood()));
+          },
           child: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -81,7 +84,7 @@ Widget _Snack(BuildContext context) {
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
               Icon(
-                Icons.breakfast_dining_outlined,
+                Icons.breakfast_dining,
                 color: Color(0xFF216651),
                 size: 30.0,
               ),
@@ -116,7 +119,7 @@ Widget _Lunch(BuildContext context) {
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
               Icon(
-                Icons.dining_outlined,
+                Icons.breakfast_dining,
                 color: Color(0xFF216651),
                 size: 30.0,
               ),
@@ -150,15 +153,14 @@ Widget _Snack2(BuildContext context) {
             width: MediaQuery.of(context).size.width,
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-               Icon(
-                Icons.breakfast_dining_outlined,
+              Icon(
+                Icons.breakfast_dining,
                 color: Color(0xFF216651),
                 size: 30.0,
               ),
               Text("Lanche da Tarde",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               const SizedBox(height: 12),
-              
               Text("248 Kcal")
             ]),
           )));
@@ -186,8 +188,8 @@ Widget _Dinner(BuildContext context) {
             width: MediaQuery.of(context).size.width,
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-               Icon(
-                Icons.dinner_dining_outlined,
+              Icon(
+                Icons.breakfast_dining,
                 color: Color(0xFF216651),
                 size: 30.0,
               ),
@@ -221,7 +223,7 @@ Widget _Supper(BuildContext context) {
             width: MediaQuery.of(context).size.width,
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-               Icon(
+              Icon(
                 Icons.emoji_food_beverage_outlined,
                 color: Color(0xFF216651),
                 size: 25.0,
